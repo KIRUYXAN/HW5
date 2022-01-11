@@ -20,8 +20,8 @@ do
     Console.WriteLine(MinMax.IsMatch(log));
     if (Rus.IsMatch(log)) Console.WriteLine("Логин может содержать только буквы латинского алфавита или цифры\n");
     else if (Num.IsMatch(log)) Console.WriteLine("Превый символ не может быть цыфрой");
-    else if (!MinMax.IsMatch(log)) Console.WriteLine("В логине должно быть от 2 до 10 символов");
+    else if (MinMax.IsMatch(log)) Console.WriteLine("В логине должно быть от 2 до 10 символов");
 
-} while (Rus.IsMatch(log) || Num.IsMatch(log) || !MinMax.IsMatch(log));
+} while (Rus.IsMatch(log) || Num.IsMatch(log) || MinMax.IsMatch(log));
 
 Console.WriteLine("ДА");
